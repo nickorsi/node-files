@@ -10,6 +10,7 @@ async function cat(file) {
   try {
     let contents = await fsP.readFile(`${file}`, "utf8");
     console.log(contents);
+    // TODO: consider having console.log outside of try/catch (end of fn)
   }
   catch (err) {
     console.log(`ENOENT: no such file or directory, open '${file}'`)

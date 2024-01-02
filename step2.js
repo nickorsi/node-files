@@ -40,6 +40,7 @@ async function webCat(url) {
   catch (err) {
   // catch (TypeError) {
     console.log(`Error fetching ${url}`);
+    // TODO: consider console.log(err);
     process.exit(1);
   }
 }
@@ -52,3 +53,4 @@ try {
 catch {
   cat(argv[2]);
 }
+// TODO: consider this into a fn instead, and then call fn
